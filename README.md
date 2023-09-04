@@ -1,14 +1,13 @@
 # Backend
-Simple backend
-
-General info
+Patterns
 
 Domain Driven Design.
 CQRS.
 Repository Pattern.
 
 
-Tools:
+Tools
+
 EntityFramework
 Mediatr
 Docker support
