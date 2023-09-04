@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> _logger;
@@ -21,7 +21,7 @@ namespace Api.Controllers
             _mediatr = mediatr;
         }
 
-        [HttpPost(Name = "CreateUser")]
+        [HttpPost("CreateUser")]
         public Task<CreateUserCommandResponse> CreateUser([FromBody] UserEntity userEntity)
         {
             var command = new CreateUserCommand(userEntity);
@@ -29,7 +29,7 @@ namespace Api.Controllers
             return commandResult;
         }
 
-        [HttpPost(Name = "GetUser")]
+        [HttpPost("GetUser")]
         public Task<GetUserResponse> GetUser([FromBody] UserEntity userEntity)
         {
             var command = new GetUserQuery(userEntity);

@@ -1,5 +1,6 @@
 using Application.Command.User;
 using Infrastructure.Context;
+using Infrastructure.RabbitMQ;
 using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +19,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//publish hello message
+RabbitMQWrapper rabbitMQWrapper = new RabbitMQWrapper(builder.Configuration);
+rabbitMQWrapper.initRabbit();
+rabbitMQWrapper.initRabbit1();
+rabbitMQWrapper.initRabbit2();
 
 //mediatr
 builder.Services.AddMediatR(cfg =>
