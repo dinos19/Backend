@@ -1,21 +1,21 @@
 # Backend
 Patterns
 
-Domain Driven Design.
-CQRS.
-Repository Pattern.
+Domain Driven Design, 
+CQRS, 
+Repository Pattern 
 
 
-Tools
+Tools 
 
-EntityFramework
-Mediatr
-Docker support
+EntityFramework, 
+Mediatr, 
+Docker support 
 
 todo
 
-MessageBroker
-Cache
-Websocket Implementation for chatrooms
+MessageBroker, 
+Cache, 
+Websocket Implementation for chatrooms 
 
 
