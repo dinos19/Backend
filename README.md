@@ -11,3 +11,11 @@ Tools
 EntityFramework
 Mediatr
 Docker support
+
+todo
+
+MessageBroker
+Cache
+Websocket Implementation for chatrooms
+
+
