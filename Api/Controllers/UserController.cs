@@ -1,6 +1,8 @@
 using Application.Command.User;
+using Application.Query.User;
 using Domain.Command.Response;
 using Domain.Entity;
+using Domain.Query.Response;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +25,14 @@ namespace Api.Controllers
         public Task<CreateUserCommandResponse> CreateUser([FromBody] UserEntity userEntity)
         {
             var command = new CreateUserCommand(userEntity);
+            var commandResult = _mediatr.Send(command);
+            return commandResult;
+        }
+
+        [HttpPost(Name = "GetUser")]
+        public Task<GetUserResponse> GetUser([FromBody] UserEntity userEntity)
+        {
+            var command = new GetUserQuery(userEntity);
             var commandResult = _mediatr.Send(command);
             return commandResult;
         }

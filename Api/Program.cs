@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen();
 //mediatr
 builder.Services.AddMediatR(cfg =>
 {
-    cfg.RegisterServicesFromAssemblies(typeof(CreateUserCommand).Assembly, typeof(CreateUserHandler).Assembly);
+    cfg.RegisterServicesFromAssemblies(typeof(CreateUserCommand).Assembly, typeof(CreateUserCommandHandler).Assembly);
 });
 var app = builder.Build();
 

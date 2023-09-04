@@ -16,6 +16,7 @@ namespace Domain.Entity
             UserType = userType;
         }
 
+        public int UserId { get; private set; }
         public string Username { get; private set; }
         public string Password { get; private set; }
         public string Email { get; private set; }

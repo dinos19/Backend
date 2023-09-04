@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace Application.Command.User
 {
-    public class CreateUserHandler : IRequestHandler<CreateUserCommand, CreateUserCommandResponse>
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, CreateUserCommandResponse>
     {
         private readonly IRepositoryWrapper _repositoryWrapper;
 
-        public CreateUserHandler(IRepositoryWrapper repositoryWrapper)
+        public CreateUserCommandHandler(IRepositoryWrapper repositoryWrapper)
         {
             _repositoryWrapper = repositoryWrapper;
         }
